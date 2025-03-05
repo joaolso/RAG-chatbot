@@ -22,24 +22,14 @@ Este projeto usa **UV** como gerenciador de pacotes, que é mais rápido e efici
 pip install uv
 ```
 
-### 2️⃣ **Criar e ativar o ambiente virtual**
+### 2️⃣ **Criar e sincronizar o ambiente virtual**
 
 ```sh
-uv venv .venv
+
+uv sync
+
 source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate     # Windows
-```
-
-### 3️⃣ **Instalar as dependências**
-
-```sh
-uv pip install -r requirements.txt
-```
-
-Se precisar gerar o `requirements.txt` novamente:
-
-```sh
-uv pip freeze > requirements.txt
 ```
 
 ## 🔑 Configuração da OpenAI API
