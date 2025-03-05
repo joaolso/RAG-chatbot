@@ -1,86 +1,89 @@
-📚 Chatbot RAG com Streamlit e ChromaDB
+# 📚 Chatbot RAG com Streamlit e ChromaDB
 
-Este é um projeto de chatbot baseado em Retrieval-Augmented Generation (RAG), utilizando Streamlit para interface, ChromaDB como banco vetorial e LangChain para integração com modelos de linguagem (LLM).
+Este é um projeto de chatbot baseado em **Retrieval-Augmented Generation (RAG)**, utilizando **Streamlit** para interface, **ChromaDB** como banco vetorial e **LangChain** para integração com modelos de linguagem (LLM).
 
-🛠 Tecnologias Utilizadas
+## 🛠 Tecnologias Utilizadas
 
-Python 3.12
+- **Python 3.12**
+- **Streamlit** (Frontend + Backend)
+- **ChromaDB** (Banco de dados vetorial)
+- **LangChain** (Integração com LLMs)
+- **OpenAI API** (Para gerar respostas)
+- **PyPDFLoader / Docx2txtLoader** (Para processar PDFs e documentos do Word)
+- **UV (gerenciador de ambiente Python)**
 
-Streamlit (Frontend + Backend)
+## 🚀 Configuração do Ambiente com UV
 
-ChromaDB (Banco de dados vetorial)
+Este projeto usa **UV** como gerenciador de pacotes, que é mais rápido e eficiente que o pip tradicional.
 
-LangChain (Integração com LLMs)
+### 1️⃣ **Instalar o UV (se ainda não tiver)**
 
-OpenAI API (Para gerar respostas)
-
-PyPDFLoader / Docx2txtLoader (Para processar PDFs e documentos do Word)
-
-UV (gerenciador de ambiente Python)
-
-🚀 Configuração do Ambiente com UV
-
-Este projeto usa UV como gerenciador de pacotes, que é mais rápido e eficiente que o pip tradicional.
-
-1️⃣ Instalar o UV (se ainda não tiver)
-
+```sh
 pip install uv
+```
 
-2️⃣ Criar e ativar o ambiente virtual
+### 2️⃣ **Criar e ativar o ambiente virtual**
 
+```sh
 uv venv .venv
 source .venv/bin/activate  # Linux/Mac
 .venv\Scripts\activate     # Windows
+```
 
-3️⃣ Instalar as dependências
+### 3️⃣ **Instalar as dependências**
 
+```sh
 uv pip install -r requirements.txt
+```
 
-Se precisar gerar o requirements.txt novamente:
+Se precisar gerar o `requirements.txt` novamente:
 
+```sh
 uv pip freeze > requirements.txt
+```
 
-🔑 Configuração da OpenAI API
+## 🔑 Configuração da OpenAI API
 
-O projeto utiliza a API da OpenAI, então você precisa configurar sua chave de API.
+O projeto utiliza a **API da OpenAI**, então você precisa configurar sua chave de API.
 
-Crie um arquivo `` na raiz do projeto
+1. **Crie um arquivo **``** na raiz do projeto**
+2. **Adicione sua chave de API no arquivo:**
 
-Adicione sua chave de API no arquivo:
-
+```sh
 OPENAI_API_KEY="sua-chave-aqui"
+```
 
-🏃‍♂️ Rodando o Projeto
+## 🏃‍♂️ Rodando o Projeto
 
 Depois de configurar o ambiente e instalar as dependências, execute o seguinte comando para iniciar o chatbot:
 
+```sh
 streamlit run main.py
+```
 
-O chatbot estará disponível no navegador no endereço http://localhost:8501.
+O chatbot estará disponível no navegador no endereço [**http://localhost:8501**](http://localhost:8501).
 
-✅ Funcionalidades
+## ✅ Funcionalidades
 
-✅ Upload de arquivos PDF e DOCX
+- ✅ Upload de arquivos **PDF e DOCX**
+- ✅ Indexação de documentos com **ChromaDB**
+- ✅ Geração de respostas inteligentes usando **OpenAI GPT**
+- ✅ Interface moderna com **Streamlit**
+- ✅ **Mecanismo de feedback** para avaliar respostas
+- ✅ Histórico de conversa salvo na sessão
 
-✅ Indexação de documentos com ChromaDB
+## 💡 Melhorias Futuras
 
-✅ Geração de respostas inteligentes usando OpenAI GPT
+- Em progresso
 
-✅ Interface moderna com Streamlit
+## 📌 Contribuição
 
-✅ Mecanismo de feedback para avaliar respostas
+Se quiser contribuir, sinta-se à vontade para abrir **issues** e enviar **pull requests**!
 
-✅ Histórico de conversa salvo na sessão
-
-💡 Melhorias Futuras
-
-Em progresso ...
-
-
-📌 Contribuição
-
-Se quiser contribuir, sinta-se à vontade para abrir issues e enviar pull requests!
-
-📜 Licença
+## 📜 Licença
 
 Este projeto é de código aberto e pode ser utilizado conforme sua necessidade.
+
+---
+
+Agora você está pronto para rodar e expandir seu **Chatbot RAG com Streamlit e ChromaDB**! 🚀🎯
