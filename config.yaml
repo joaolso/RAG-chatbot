@@ -1,0 +1,12 @@
+credentials:
+  usernames:
+    adm:
+      email: "joaooliveira@gmail.com"
+      logged_in: False
+      name: Joao Lucas
+      password: null
+
+cookie:
+  expiry_days: 1
+  key: some_signature_key
+  name: some_cookie_name
