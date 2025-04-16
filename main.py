@@ -68,7 +68,6 @@ if query:
         Pergunta: {question}
         
         Se a resposta não estiver no conteúdo desse template, responda: "Peço desculpas, não posso lhe ajudar com isso."
-        Porém, se você receber cumprimentos, responda de acordo com o cumprimento e adicione: "Como posso te ajudar hoje?".
         """
     )
     
@@ -78,10 +77,10 @@ if query:
     auxiliar = 0
     # Adicionar referência do arquivo à resposta
     referencia = f"\n\n📄 **Fonte:** {', '.join(source_files)}"
-    patterns = ["Peço desculpas.*", "Como posso.*ajudar"]
-    if not any(re.search(p, resposta) for p in patterns):
-        resposta += referencia
-        auxiliar = 1
+    pattern = "Peço desculpas, não posso lhe ajudar com isso."
+    if not re.search(pattern=pattern, string=resposta, flags=0):
+         resposta += referencia
+         auxiliar = 1
     
     # Adicionar ao histórico
     st.session_state.chat_history.append({"pergunta": query, "resposta": resposta})
